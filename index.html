@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ustedes💛</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:#fff4b3; /* amarillo bajito */
+    font-family: 'Arial', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Contenedor */
+.container{
+    text-align:center;
+}
+
+/* Ramo */
+.ramo{
+    position:relative;
+    width:200px;
+    height:300px;
+    margin:auto;
+}
+
+/* Flores */
+.flor{
+    position:absolute;
+    width:60px;
+    height:60px;
+    background:yellow;
+    border-radius:50%;
+    box-shadow:0 0 10px rgba(255,255,0,0.7);
+}
+
+/* Centro de flor */
+.flor::after{
+    content:"";
+    width:20px;
+    height:20px;
+    background:#ffcc00;
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+/* Posiciones */
+.f1{ top:0; left:70px;}
+.f2{ top:40px; left:20px;}
+.f3{ top:40px; left:120px;}
+.f4{ top:90px; left:70px;}
+
+/* Papel envolvente */
+.papel{
+    position:absolute;
+    bottom:0;
+    width:200px;
+    height:150px;
+    background:#d4a373;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Mensaje */
+.mensaje{
+    margin-top:20px;
+    font-size:28px;
+    color:#b08900;
+    font-weight:bold;
+    animation: aparecer 2s ease;
+}
+
+/* Animación */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<div class="container">
+
+    <div class="ramo">
+        <div class="flor f1">
+
+    <!-- capa externa -->
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+
+    <!-- capa interna -->
+    <div class="inner">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span>
+    </div>
+
+</div>
+        <div class="flor f2">
+
+    <!-- capa externa -->
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+
+    <!-- capa interna -->
+    <div class="inner">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span>
+    </div>
+
+</div>
+        <div class="flor f3">
+
+    <!-- capa externa -->
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+
+    <!-- capa interna -->
+    <div class="inner">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span>
+    </div>
+
+</div>
+        <div class="flor f4">
+
+    <!-- capa externa -->
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+
+    <!-- capa interna -->
+    <div class="inner">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span>
+    </div>
+
+</div>
+        <div class="papel"></div>
+    </div>
+
+    <div class="mensaje">
+        Para las grandes mujeres de mi vida💛
+    </div>
+
+</div>
+
+<button id="btnMusica">🎵 Reproducir música</button>
+
+<audio id="musica" src="musica.mp3"></audio>
+
+<script src="jscrip.js"></script>
+
+</body>
+</html>

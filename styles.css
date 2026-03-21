@@ -1,0 +1,170 @@
+body{
+    margin:0;
+    padding:0;
+    background:#fff4b3; /* amarillo bajito */
+    font-family: 'Arial', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Contenedor */
+.container{
+    text-align:center;
+}
+
+/* Ramo */
+.ramo{
+    position:relative;
+    width:200px;
+    height:300px;
+    margin:auto;
+}
+
+/* ROSA ULTRA DETALLADA */
+.flor{
+    position:absolute;
+    width:70px;
+    height:70px;
+    animation: flotar 4s infinite ease-in-out;
+}
+
+/* pétalos base */
+.flor span{
+    position:absolute;
+    width:30px;
+    height:45px;
+    background:linear-gradient(145deg, #fff59d, #fbc02d);
+    border-radius:50%;
+    top:12px;
+    left:20px;
+    transform-origin:center bottom;
+    box-shadow: inset -2px -4px 6px rgba(0,0,0,0.2);
+}
+
+/* MÁS pétalos (más realismo) */
+.flor span:nth-child(1){ transform:rotate(0deg);}
+.flor span:nth-child(2){ transform:rotate(30deg);}
+.flor span:nth-child(3){ transform:rotate(60deg);}
+.flor span:nth-child(4){ transform:rotate(90deg);}
+.flor span:nth-child(5){ transform:rotate(120deg);}
+.flor span:nth-child(6){ transform:rotate(150deg);}
+.flor span:nth-child(7){ transform:rotate(180deg);}
+.flor span:nth-child(8){ transform:rotate(210deg);}
+.flor span:nth-child(9){ transform:rotate(240deg);}
+.flor span:nth-child(10){ transform:rotate(270deg);}
+.flor span:nth-child(11){ transform:rotate(300deg);}
+.flor span:nth-child(12){ transform:rotate(330deg);}
+
+/* capa interna (segunda capa de pétalos) */
+.flor .inner{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.flor .inner span{
+    width:22px;
+    height:35px;
+    background:linear-gradient(145deg, #ffe082, #f9a825);
+    top:18px;
+    left:24px;
+    box-shadow: inset -2px -3px 5px rgba(0,0,0,0.2);
+}
+
+/* centro realista */
+.flor::after{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:radial-gradient(circle, #ffca28, #e65100);
+    border-radius:50%;
+    top:25px;
+    left:25px;
+    box-shadow:0 0 8px rgba(255,200,0,0.8);
+}
+/* Papel */
+.papel{
+    position:absolute;
+    bottom:0;
+    width:200px;
+    height:150px;
+    background:#d4a373;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Mensaje */
+.mensaje{
+    margin-top:20px;
+    font-size:28px;
+    color:#b08900;
+    font-weight:bold;
+    opacity:0;
+}
+
+/* Animaciones */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes flotar{
+    0%{ transform:translateY(0);}
+    50%{ transform:translateY(-10px);}
+    100%{ transform:translateY(0);}
+}
+/* Fondo con flores */
+.fondo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+/* flores pequeñas */
+.flor-fondo{
+    position:absolute;
+    width:15px;
+    height:15px;
+    background:radial-gradient(circle, #fff176, #fbc02d);
+    border-radius:50%;
+    opacity:0.6;
+    animation: flotarFondo linear infinite;
+}
+
+/* animación */
+@keyframes flotarFondo{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-10vh);
+    }
+}
+
+#btnMusica{
+    margin-top:15px;
+    padding:10px 20px;
+    font-size:16px;
+    background:#fbc02d;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    color:#fff;
+    transition:0.3s;
+}
+
+#btnMusica:hover{
+    background:#f9a825;
+}
