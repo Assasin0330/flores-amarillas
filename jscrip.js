@@ -87,27 +87,27 @@ function mostrarCarta(nombre){
     /* textos */
     if(nombre === "mama"){
         textoCarta.textContent = "Gracias mamá por todo tu amor 💛";
-        contraseñaCorrecta = "teamomami";
+        contraseñaCorrecta = "mamá";
     }
 
     if(nombre === "tia"){
         textoCarta.textContent = "Gracias tía por siempre apoyarme 🌼";
-        contraseñaCorrecta = "tillita";
+        contraseñaCorrecta = "tia";
     }
 
     if(nombre === "ama_lorena"){
         textoCarta.textContent = "Ama Lorena, eres muy especial 💕";
-        contraseñaCorrecta = "siemprelaamare";
+        contraseñaCorrecta = "ama_lorena";
     }
 
-    if(nombre === "carmen"){
+    if(nombre === "mami_carmen"){
         textoCarta.textContent = "Mami Carmen, gracias por cuidarme 💛";
-        contraseñaCorrecta = "teadoromami";
+        contraseñaCorrecta = "mami_carmen";
     }
 
     if(nombre === "pita"){
         textoCarta.textContent = "Pita, eres increíble 🌸";
-        contraseñaCorrecta = "ereslamejor";
+        contraseñaCorrecta = "pita";
     }
 
 }
