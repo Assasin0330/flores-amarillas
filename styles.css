@@ -168,3 +168,19 @@ body{
 #btnMusica:hover{
     background:#f9a825;
 }
+.btn-cartas{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#fbc02d;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.btn-cartas:hover{
+    background:#f9a825;
+    transform:scale(1.05);
+}
