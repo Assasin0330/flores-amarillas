@@ -49,46 +49,93 @@ btn.addEventListener("click", () => {
     reproduciendo = !reproduciendo;
 });
 
-const modal = document.getElementById("modal");
-const cartaImg = document.getElementById("cartaImg");
+
+const abrirMenu = document.getElementById("abrirMenu");
+const menu = document.querySelector(".menu-cartas");
+const carta = document.getElementById("carta");
+
+const imagen = document.getElementById("imagenCarta");
+const textoCarta = document.getElementById("textoCarta");
+
+const contenido = document.querySelector(".contenido");
+const candado = document.querySelector(".candado");
 
 let contraseñaCorrecta = "1234";
 
-/* abrir */
-function abrirCarta(nombre){
+/* abrir interfaz */
+abrirMenu.addEventListener("click", () => {
 
-    modal.style.display = "flex";
+    menu.classList.remove("oculto");
+    abrirMenu.style.display = "none";
 
-    cartaImg.src = nombre + ".jpg";
+});
 
-}
+/* mostrar carta */
+function mostrarCarta(nombre){
 
-/* cerrar */
-function cerrarCarta(){
+    menu.classList.add("oculto");
+    carta.classList.remove("oculto");
 
-    modal.style.display = "none";
+    contenido.classList.add("blur");
+    candado.style.display = "block";
 
-    cartaImg.classList.add("blur");
+    document.getElementById("password").value = "";
 
-    document.querySelector(".candado").style.display = "block";
+    /* cambiar imagen */
+    imagen.src = nombre + ".jpg";
+
+    /* textos */
+    if(nombre === "mama"){
+        textoCarta.textContent = "Gracias mamá por todo tu amor 💛";
+        contraseñaCorrecta = "mama";
+    }
+
+    if(nombre === "tia"){
+        textoCarta.textContent = "Gracias tía por siempre apoyarme 🌼";
+        contraseñaCorrecta = "tia";
+    }
+
+    if(nombre === "lorena"){
+        textoCarta.textContent = "Ama Lorena, eres muy especial 💕";
+        contraseñaCorrecta = "lorena";
+    }
+
+    if(nombre === "carmen"){
+        textoCarta.textContent = "Mami Carmen, gracias por cuidarme 💛";
+        contraseñaCorrecta = "carmen";
+    }
+
+    if(nombre === "pita"){
+        textoCarta.textContent = "Pita, eres increíble 🌸";
+        contraseñaCorrecta = "pita";
+    }
 
 }
 
 /* desbloquear */
 function desbloquear(){
 
-    let pass = document.getElementById("password").value;
+    const pass = document.getElementById("password").value;
 
     if(pass === contraseñaCorrecta){
 
-        cartaImg.classList.remove("blur");
+        contenido.classList.remove("blur");
+        contenido.classList.add("desbloqueado");
 
-        document.querySelector(".candado").style.display = "none";
+        candado.style.display = "none";
 
     }else{
 
-        alert("Contraseña incorrecta");
+        alert("❌ Contraseña incorrecta");
 
     }
+
+}
+
+/* regresar */
+function volverMenu(){
+
+    carta.classList.add("oculto");
+    menu.classList.remove("oculto");
 
 }
