@@ -49,121 +49,150 @@ btn.addEventListener("click", () => {
     reproduciendo = !reproduciendo;
 });
 
+
+/* secciones */
+const inicio = document.getElementById("inicio");
+const menu = document.getElementById("menu");
+const cartaSection =
+document.getElementById("cartaSection");
+
+/* carta */
+const imgCarta =
+document.getElementById("imgCarta");
+
+const candado =
+document.getElementById("candado");
+
+const mensajeCarta =
+document.getElementById("mensajeCarta");
+
+const tituloCarta =
+document.getElementById("tituloCarta");
+
+/* contraseña */
 let contraseñaCorrecta = "";
 
-const abrirMenu = document.getElementById("abrirMenu");
-const menu = document.querySelector(".menu-cartas");
-const carta = document.getElementById("carta");
+/* abrir menú */
+function abrirMenu(){
 
-const imagen = document.getElementById("imagenCarta");
-const textoCarta = document.getElementById("textoCarta");
-
-const contenido = document.querySelector(".contenido");
-const candado = document.querySelector(".candado");
-
-let contraseñaCorrecta = "1234";
-
-/* abrir interfaz */
-abrirMenu.addEventListener("click", () => {
-
+    inicio.classList.add("oculto");
     menu.classList.remove("oculto");
-    abrirMenu.style.display = "none";
 
-});
+}
 
-
-function mostrarCarta(nombre){
+/* volver inicio */
+function volverInicio(){
 
     menu.classList.add("oculto");
-    carta.classList.remove("oculto");
+    cartaSection.classList.add("oculto");
 
-    /* reiniciar carta */
-    document.getElementById("imgCarta")
-    .classList.remove("abierta");
+    inicio.classList.remove("oculto");
 
-    document.querySelector(".candado")
-    .classList.remove("oculto");
+}
 
-    document.querySelector(".mensajeOculto")
-    .classList.remove("visible");
+/* volver menú */
+function volverMenu(){
+
+    cartaSection.classList.add("oculto");
+    menu.classList.remove("oculto");
+
+}
+
+/* abrir carta */
+function abrirCarta(nombre){
+
+    menu.classList.add("oculto");
+    cartaSection.classList.remove("oculto");
+
+    /* reiniciar */
+    imgCarta.classList.remove("abierta");
+
+    candado.classList.remove("oculto");
+
+    mensajeCarta.classList.remove("visible");
 
     document.getElementById("password").value = "";
 
-    /* CAMBIAR CONTRASEÑA */
+    /* datos */
 
     if(nombre === "mama"){
 
-        contraseñaCorrecta = "mama";
-        textoCarta.textContent =
+        tituloCarta.textContent =
+        "💌 Carta para Mamá";
+
+        mensajeCarta.textContent =
         "Gracias mamá por todo tu amor 💛";
 
+        contraseñaCorrecta = "mama";
     }
 
     if(nombre === "tia"){
 
-        contraseñaCorrecta = "tia";
-        textoCarta.textContent =
+        tituloCarta.textContent =
+        "💌 Carta para Tía";
+
+        mensajeCarta.textContent =
         "Gracias tía por siempre apoyarme 🌼";
 
+        contraseñaCorrecta = "tia";
     }
 
     if(nombre === "lorena"){
 
-        contraseñaCorrecta = "lorena";
-        textoCarta.textContent =
+        tituloCarta.textContent =
+        "💌 Carta para Ama Lorena";
+
+        mensajeCarta.textContent =
         "Ama Lorena, eres muy especial 💕";
 
+        contraseñaCorrecta = "lorena";
     }
 
     if(nombre === "carmen"){
 
-        contraseñaCorrecta = "carmen";
-        textoCarta.textContent =
+        tituloCarta.textContent =
+        "💌 Carta para Mami Carmen";
+
+        mensajeCarta.textContent =
         "Mami Carmen, gracias por cuidarme 💛";
 
+        contraseñaCorrecta = "carmen";
     }
 
     if(nombre === "pita"){
 
-        contraseñaCorrecta = "pita";
-        textoCarta.textContent =
+        tituloCarta.textContent =
+        "💌 Carta para Pita";
+
+        mensajeCarta.textContent =
         "Pita, eres increíble 🌸";
 
+        contraseñaCorrecta = "pita";
     }
 
 }
 
+/* desbloquear */
+function desbloquearCarta(){
 
-function desbloquear(){
-
-    let pass = document
-    .getElementById("password")
+    let pass =
+    document.getElementById("password")
     .value
     .toLowerCase()
     .trim();
 
     if(pass === contraseñaCorrecta){
 
-        document.getElementById("imgCarta")
-        .classList.add("abierta");
+        imgCarta.classList.add("abierta");
 
-        document.querySelector(".candado")
-        .classList.add("oculto");
+        candado.classList.add("oculto");
 
-        document.querySelector(".mensajeOculto")
-        .classList.add("visible");
+        mensajeCarta.classList.add("visible");
 
     }else{
 
         alert("❌ Contraseña incorrecta");
 
     }
-
-}
-/* regresar */
-function volverMenu(){
-
-    carta.classList.add("oculto");
-    menu.classList.remove("oculto");
 
 }
