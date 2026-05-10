@@ -119,7 +119,15 @@ function desbloquear(){
 
     if(pass === contraseñaCorrecta){
 
-      document.querySelector(".sobre").classList.add("abierto");
+    
+document.getElementById("imgCarta")
+.classList.add("abierta");
+
+document.querySelector(".candado")
+.classList.add("oculto");
+
+document.querySelector(".mensajeOculto")
+.classList.add("visible");
     }else{
 
         alert("❌ Contraseña incorrecta");
