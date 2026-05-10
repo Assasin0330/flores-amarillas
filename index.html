@@ -169,59 +169,107 @@ body{
 <audio id="musica" src="musica.mp3"></audio>
 
 
-<!-- BOTÓN PRINCIPAL -->
-<button id="abrirMenu">💌 Ver Cartas</button>
 
-<!-- INTERFAZ -->
-<div class="menu-cartas oculto">
+    <!-- ================= INICIO ================= -->
 
-    <h1>💛 Cartas Especiales 💛</h1>
+    <section id="inicio">
 
-    <div class="botones">
+        <h1>🌼 Para Mamá 💛</h1>
 
-        <button onclick="mostrarCarta('mama')">MAMÁ</button>
-        <button onclick="mostrarCarta('tia')">TÍA</button>
-        <button onclick="mostrarCarta('lorena')">AMA LORENA</button>
-        <button onclick="mostrarCarta('carmen')">MAMI CARMEN</button>
-        <button onclick="mostrarCarta('pita')">PITA</button>
+        <div class="ramo">
+            🌹🌹🌹
+        </div>
 
-    </div>
+        <button onclick="abrirMenu()">
+            💌 Ver Cartas
+        </button>
 
-    <!-- IMAGEN -->
-    <img id="imagenCarta" src="mama.jpg">
+    </section>
 
-</div>
+    <!-- ================= MENÚ ================= -->
 
-<!-- CARTA -->
-<div id="carta" class="carta oculto">
+    <section id="menu" class="oculto">
 
-    <div class="candado">🔒</div>
+        <h1>💛 Cartas Especiales 💛</h1>
 
-    <input type="password" id="password" placeholder="Contraseña">
+        <div class="botones">
 
-    <button onclick="desbloquear()">Abrir Carta</button>
+            <button onclick="abrirCarta('mama')">
+                MAMÁ
+            </button>
 
-    <!-- CONTENIDO -->
-   
-<!-- SOBRE -->
+            <button onclick="abrirCarta('tia')">
+                TÍA
+            </button>
 
-<div class="contenedor-carta">
+            <button onclick="abrirCarta('lorena')">
+                AMA LORENA
+            </button>
 
-    <!-- candado -->
-    <div class="candado">🔒</div>
+            <button onclick="abrirCarta('carmen')">
+                MAMI CARMEN
+            </button>
 
-    <!-- imagen -->
-    <img src="carta.png" class="imgCarta" id="imgCarta">
+            <button onclick="abrirCarta('pita')">
+                PITA
+            </button>
 
-    <!-- mensaje oculto -->
-    <div class="mensajeOculto" id="textoCarta">
-        Gracias por siempre estar conmigo 💛
-    </div>
+        </div>
 
-</div>
-    <button onclick="volverMenu()">🔙 Regresar</button>
+        <button onclick="volverInicio()">
+            🏠 Regresar al Inicio
+        </button>
 
-</div>
+    </section>
+
+    <!-- ================= CARTA ================= -->
+
+    <section id="cartaSection" class="oculto">
+
+        <h1 id="tituloCarta">
+            💌 Carta
+        </h1>
+
+        <div class="contenedorCarta">
+
+            <!-- candado -->
+            <div class="candado" id="candado">
+                🔒
+            </div>
+
+            <!-- imagen -->
+            <img src="carta.png"
+                 id="imgCarta"
+                 class="imgCarta">
+
+            <!-- mensaje -->
+            <div id="mensajeCarta"
+                 class="mensajeCarta">
+
+            </div>
+
+        </div>
+
+        <input type="password"
+               id="password"
+               placeholder="Contraseña">
+
+        <button onclick="desbloquearCarta()">
+            🔑 Abrir Carta
+        </button>
+
+        <br>
+
+        <button onclick="volverMenu()">
+            🔙 Regresar al Menú
+        </button>
+
+        <button onclick="volverInicio()">
+            🏠 Inicio
+        </button>
+
+    </section>
+
     
 <script src="jscrip.js"></script>
 
