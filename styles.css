@@ -308,3 +308,57 @@ button:hover{
 .abierto .candado{
     opacity:0;
 }
+
+
+/* contenedor */
+.contenedor-carta{
+    position:relative;
+    width:350px;
+    margin:auto;
+    margin-top:30px;
+}
+
+/* imagen carta */
+.imgCarta{
+    width:100%;
+    filter:blur(8px);
+    transition:1s;
+}
+
+/* desbloqueada */
+.imgCarta.abierta{
+    filter:blur(0);
+}
+
+/* candado */
+.candado{
+    position:absolute;
+    top:40%;
+    left:45%;
+    font-size:40px;
+    z-index:5;
+    transition:1s;
+}
+
+/* ocultar candado */
+.candado.oculto{
+    opacity:0;
+}
+
+/* mensaje */
+.mensajeOculto{
+    position:absolute;
+    top:35%;
+    left:10%;
+    width:80%;
+    font-size:22px;
+    color:#5c4033;
+    opacity:0;
+    transition:1s;
+    text-align:center;
+}
+
+/* mostrar mensaje */
+.mensajeOculto.visible{
+    opacity:1;
+}
