@@ -95,7 +95,7 @@ function mostrarCarta(nombre){
         contraseñaCorrecta = "tillita";
     }
 
-    if(nombre === "lorena"){
+    if(nombre === "ama_lorena"){
         textoCarta.textContent = "Ama Lorena, eres muy especial 💕";
         contraseñaCorrecta = "siempre la amare";
     }
