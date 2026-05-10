@@ -168,10 +168,54 @@ body{
 
 <audio id="musica" src="musica.mp3"></audio>
 
-<a href="cartas.html" class="btn-cartas">
-    💌 Ver Cartas
-</a>
 
+<!-- BOTÓN PRINCIPAL -->
+<button id="abrirMenu">💌 Ver Cartas</button>
+
+<!-- INTERFAZ -->
+<div class="menu-cartas oculto">
+
+    <h1>💛 Cartas Especiales 💛</h1>
+
+    <div class="botones">
+
+        <button onclick="mostrarCarta('mama')">MAMÁ</button>
+        <button onclick="mostrarCarta('tia')">TÍA</button>
+        <button onclick="mostrarCarta('lorena')">AMA LORENA</button>
+        <button onclick="mostrarCarta('carmen')">MAMI CARMEN</button>
+        <button onclick="mostrarCarta('pita')">PITA</button>
+
+    </div>
+
+    <!-- IMAGEN -->
+    <img id="imagenCarta" src="mama.jpg">
+
+</div>
+
+<!-- CARTA -->
+<div id="carta" class="carta oculto">
+
+    <div class="candado">🔒</div>
+
+    <input type="password" id="password" placeholder="Contraseña">
+
+    <button onclick="desbloquear()">Abrir Carta</button>
+
+    <!-- CONTENIDO -->
+    <div class="contenido blur">
+
+        <h2>💌 Para ti</h2>
+
+        <p id="textoCarta">
+            Gracias por siempre estar conmigo 💛
+        </p>
+
+    </div>
+
+    <button onclick="volverMenu()">🔙 Regresar</button>
+
+</div>
+    
 <script src="jscrip.js"></script>
 
 </body>
