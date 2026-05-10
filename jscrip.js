@@ -82,32 +82,32 @@ function mostrarCarta(nombre){
     document.getElementById("password").value = "";
 
     /* cambiar imagen */
-    imagen.src = nombre + ".jpg";
+    imagen.src = nombre + ".png";
 
     /* textos */
     if(nombre === "mama"){
         textoCarta.textContent = "Gracias mamá por todo tu amor 💛";
-        contraseñaCorrecta = "mama";
+        contraseñaCorrecta = "te amo mami";
     }
 
     if(nombre === "tia"){
         textoCarta.textContent = "Gracias tía por siempre apoyarme 🌼";
-        contraseñaCorrecta = "tia";
+        contraseñaCorrecta = "tillita";
     }
 
     if(nombre === "lorena"){
         textoCarta.textContent = "Ama Lorena, eres muy especial 💕";
-        contraseñaCorrecta = "lorena";
+        contraseñaCorrecta = "siempre la amare";
     }
 
     if(nombre === "carmen"){
         textoCarta.textContent = "Mami Carmen, gracias por cuidarme 💛";
-        contraseñaCorrecta = "carmen";
+        contraseñaCorrecta = "te adoro mami";
     }
 
     if(nombre === "pita"){
         textoCarta.textContent = "Pita, eres increíble 🌸";
-        contraseñaCorrecta = "pita";
+        contraseñaCorrecta = "eres la mejor";
     }
 
 }
