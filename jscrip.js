@@ -48,3 +48,47 @@ btn.addEventListener("click", () => {
     }
     reproduciendo = !reproduciendo;
 });
+
+const modal = document.getElementById("modal");
+const cartaImg = document.getElementById("cartaImg");
+
+let contraseñaCorrecta = "1234";
+
+/* abrir */
+function abrirCarta(nombre){
+
+    modal.style.display = "flex";
+
+    cartaImg.src = nombre + ".jpg";
+
+}
+
+/* cerrar */
+function cerrarCarta(){
+
+    modal.style.display = "none";
+
+    cartaImg.classList.add("blur");
+
+    document.querySelector(".candado").style.display = "block";
+
+}
+
+/* desbloquear */
+function desbloquear(){
+
+    let pass = document.getElementById("password").value;
+
+    if(pass === contraseñaCorrecta){
+
+        cartaImg.classList.remove("blur");
+
+        document.querySelector(".candado").style.display = "none";
+
+    }else{
+
+        alert("Contraseña incorrecta");
+
+    }
+
+}
