@@ -87,7 +87,7 @@ function mostrarCarta(nombre){
     /* textos */
     if(nombre === "mama"){
         textoCarta.textContent = "Gracias mamá por todo tu amor 💛";
-        contraseñaCorrecta = "te amo mami";
+        contraseñaCorrecta = "teamomami";
     }
 
     if(nombre === "tia"){
@@ -97,17 +97,17 @@ function mostrarCarta(nombre){
 
     if(nombre === "ama_lorena"){
         textoCarta.textContent = "Ama Lorena, eres muy especial 💕";
-        contraseñaCorrecta = "siempre la amare";
+        contraseñaCorrecta = "siemprelaamare";
     }
 
     if(nombre === "carmen"){
         textoCarta.textContent = "Mami Carmen, gracias por cuidarme 💛";
-        contraseñaCorrecta = "te adoro mami";
+        contraseñaCorrecta = "teadoromami";
     }
 
     if(nombre === "pita"){
         textoCarta.textContent = "Pita, eres increíble 🌸";
-        contraseñaCorrecta = "eres la mejor";
+        contraseñaCorrecta = "ereslamejor";
     }
 
 }
