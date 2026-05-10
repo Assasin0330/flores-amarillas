@@ -119,11 +119,7 @@ function desbloquear(){
 
     if(pass === contraseñaCorrecta){
 
-        contenido.classList.remove("blur");
-        contenido.classList.add("desbloqueado");
-
-        candado.style.display = "none";
-
+      document.querySelector(".sobre").classList.add("abierto");
     }else{
 
         alert("❌ Contraseña incorrecta");
