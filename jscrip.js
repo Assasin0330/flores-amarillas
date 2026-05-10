@@ -49,6 +49,7 @@ btn.addEventListener("click", () => {
     reproduciendo = !reproduciendo;
 });
 
+let contraseñaCorrecta = "";
 
 const abrirMenu = document.getElementById("abrirMenu");
 const menu = document.querySelector(".menu-cartas");
@@ -70,44 +71,64 @@ abrirMenu.addEventListener("click", () => {
 
 });
 
-/* mostrar carta */
+
 function mostrarCarta(nombre){
 
     menu.classList.add("oculto");
     carta.classList.remove("oculto");
 
-    contenido.classList.add("blur");
-    candado.style.display = "block";
+    /* reiniciar carta */
+    document.getElementById("imgCarta")
+    .classList.remove("abierta");
+
+    document.querySelector(".candado")
+    .classList.remove("oculto");
+
+    document.querySelector(".mensajeOculto")
+    .classList.remove("visible");
 
     document.getElementById("password").value = "";
 
-    /* cambiar imagen */
-    imagen.src = nombre + ".png";
+    /* CAMBIAR CONTRASEÑA */
 
-    /* textos */
     if(nombre === "mama"){
-        textoCarta.textContent = "Gracias mamá por todo tu amor 💛";
-        contraseñaCorrecta = "mamá";
+
+        contraseñaCorrecta = "mama";
+        textoCarta.textContent =
+        "Gracias mamá por todo tu amor 💛";
+
     }
 
     if(nombre === "tia"){
-        textoCarta.textContent = "Gracias tía por siempre apoyarme 🌼";
+
         contraseñaCorrecta = "tia";
+        textoCarta.textContent =
+        "Gracias tía por siempre apoyarme 🌼";
+
     }
 
-    if(nombre === "ama_lorena"){
-        textoCarta.textContent = "Ama Lorena, eres muy especial 💕";
-        contraseñaCorrecta = "ama_lorena";
+    if(nombre === "lorena"){
+
+        contraseñaCorrecta = "lorena";
+        textoCarta.textContent =
+        "Ama Lorena, eres muy especial 💕";
+
     }
 
-    if(nombre === "mami_carmen"){
-        textoCarta.textContent = "Mami Carmen, gracias por cuidarme 💛";
-        contraseñaCorrecta = "mami_carmen";
+    if(nombre === "carmen"){
+
+        contraseñaCorrecta = "carmen";
+        textoCarta.textContent =
+        "Mami Carmen, gracias por cuidarme 💛";
+
     }
 
     if(nombre === "pita"){
-        textoCarta.textContent = "Pita, eres increíble 🌸";
+
         contraseñaCorrecta = "pita";
+        textoCarta.textContent =
+        "Pita, eres increíble 🌸";
+
     }
 
 }
