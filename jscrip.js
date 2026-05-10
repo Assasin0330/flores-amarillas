@@ -133,22 +133,26 @@ function mostrarCarta(nombre){
 
 }
 
-/* desbloquear */
+
 function desbloquear(){
 
-    const pass = document.getElementById("password").value;
+    let pass = document
+    .getElementById("password")
+    .value
+    .toLowerCase()
+    .trim();
 
     if(pass === contraseñaCorrecta){
 
-    
-document.getElementById("imgCarta")
-.classList.add("abierta");
+        document.getElementById("imgCarta")
+        .classList.add("abierta");
 
-document.querySelector(".candado")
-.classList.add("oculto");
+        document.querySelector(".candado")
+        .classList.add("oculto");
 
-document.querySelector(".mensajeOculto")
-.classList.add("visible");
+        document.querySelector(".mensajeOculto")
+        .classList.add("visible");
+
     }else{
 
         alert("❌ Contraseña incorrecta");
@@ -156,7 +160,6 @@ document.querySelector(".mensajeOculto")
     }
 
 }
-
 /* regresar */
 function volverMenu(){
 
